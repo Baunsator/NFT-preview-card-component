@@ -1,0 +1,204 @@
+   @import url(https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap);
+
+   :root {
+       --Soft-blue: hsl(215, 51%, 70%);
+       --Cyan: hsl(178, 100%, 50%);
+
+       --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+       --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+       --Very-dark-blue-line: hsl(215, 32%, 27%);
+       --White: hsl(0, 0%, 100%);
+
+       --font-size-paragraph: 18px;
+       --font-family-outfit: 'Outfit', sans-serif;
+   }
+
+   * {
+       box-sizing: border-box;
+       line-height: 1.5;
+       margin: 0;
+       padding: 0;
+   }
+
+   html,
+   body {
+       height: 100%;
+       -webkit-font-smoothing: anialiased;
+       font-size: 16px;
+   }
+
+   img {
+       max-width: 100%;
+   }
+
+   body {
+       background-color: var(--Very-dark-blue-main-BG);
+       font-family: var(--font-family-outfit);
+       display: flex;
+       flex-flow: column;
+       justify-content: center;
+       align-items: center;
+   }
+
+   footer {
+       margin-top: 50px;
+   }
+
+   h1 {
+       color: var(--White);
+       font-size: 1.6em;
+       padding: 5px 0;
+   }
+
+   p {
+       color: var(--Soft-blue);
+       font-size: var(--font-size-paragraph);
+       font-weight: 300;
+       padding: 5px 0;
+   }
+
+   .attribution {
+       font-size: 11px;
+       color: aqua;
+       text-align: center;
+   }
+
+   .attribution a {
+       color: var(--Soft-blue);
+       text-decoration: none;
+   }
+
+   .card {
+       background-color: var(--Very-dark-blue-card-BG);
+       border-radius: 10px;
+       max-width: 350px;
+       padding: 20px;
+       text-align: left;
+   }
+
+   .image-equilibrium {
+       border-radius: 10px;
+       display: block;
+       width: 100%;
+       height: auto;
+   }
+
+   .icon-ethereum {
+       grid-column: 1 / 2;
+   }
+
+   .price {
+       color: var(--Cyan);
+       font-weight: 600;
+       grid-column: 2 / 3;
+       justify-self: start;
+   }
+
+   .icon-clock {
+       grid-column: 3 / 4;
+       justify-self: end;
+   }
+
+   .time {
+       color: var(--Soft-blue);
+       font-weight: 400;
+       grid-column: 4 / 5;
+       justify-self: end;
+   }
+
+   .toprow {
+       display: grid;
+       grid-template-columns: auto 1fr auto auto;
+       gap: 5px;
+       align-items: center;
+       padding: 5px 0;
+       width: inherit;
+   }
+
+   .botrow {
+       border-top: solid 2px var(--Very-dark-blue-line);
+       display: flex;
+       flex-flow: row;
+       gap: 5px;
+       align-items: center;
+       justify-content: flex-start;
+       padding: 10px 0 0 0;
+       margin-top: 5px;
+   }
+
+   .avatar {
+       border: solid 1px var(--White);
+       border-radius: 50%;
+       width: 10%;
+       margin-right: 10px;
+   }
+
+   .name1 {
+       color: var(--Soft-blue);
+       font-weight: 300;
+   }
+
+   .name2 {
+       color: var(--White);
+       font-weight: 400;
+   }
+
+   /* Active States */
+
+   .overlay-container {
+       position: relative;
+       width: 100%;
+   }
+
+   .overlay {
+       background-color: var(--Cyan);
+       border-radius: 10px;
+       position: absolute;
+       top: 0;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       height: 100%;
+       width: 100%;
+       opacity: 0;
+   }
+
+   .overlay:hover {
+    cursor: pointer;
+   }
+
+   .icon-view {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       opacity: 0;
+   }
+
+   .overlay-container:active .overlay {
+       cursor: pointer;
+       opacity: 0.5;
+   }
+
+   .overlay-container:active .icon-view {
+       cursor: pointer;
+       opacity: 1;
+   }
+
+   h1:active {
+       color: var(--Cyan);
+       cursor: pointer;
+   }
+
+   h1:hover {
+       cursor: pointer;
+   }
+
+   .name2:active {
+       color: var(--Cyan);
+       cursor: pointer;
+   }
+
+   .name2:hover {
+       cursor: pointer;
+   }
